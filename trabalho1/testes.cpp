@@ -4,6 +4,9 @@
 #include "dominios.h"
 #include "entidades.h"
 
+// Usuario:
+// private:
+
 void TUUsuario::SetUp(){
     usuario = new Usuario(); // aloca espaço de memória para o objeto usuario
     estado = SUCESSO;
@@ -45,6 +48,8 @@ void TUUsuario::TestarSenha(){
     }
 }
 
+// public:
+
 bool TUUsuario::RunTesteCpf(){
     SetUp(); // aloca memoria para um objeto do tipo usuario
     TestarCpf(); // caso de teste do cpf
@@ -58,6 +63,9 @@ bool TUUsuario::RunTesteSenha(){
     TearDown(); // desaloca memoria do objeto do tipo usuario
     return estado; // retorna resultado do teste
 }
+
+// Evento:
+// private:
 
 void TUEvento::SetUp(){
     evento = new Evento(); // aloca espaço de memória para o objeto usuario

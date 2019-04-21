@@ -7,7 +7,7 @@
 class TUUsuario{
     private:
     // definição das constantes utiizadas
-        const static std::string VALOR_VALIDO_CPF = "106.506.924.38";
+        const static std::string VALOR_VALIDO_CPF = "106.506.924-38";
         const static std::string VALOR_VALIDO_SENHA = "12345A";
     // objeto a ser testado
         Usuario *usuario;

@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class codigo_de_evento {
+class Codigo_de_evento {
     //3 digitos de 0 a 9
     private:
         std::string info;
@@ -16,13 +16,13 @@ class codigo_de_evento {
         void Set(string input) throw (invalid_argument){
             Validar(input);
             this->info = input;
-        }
-        inline int Get() const {
+        };
+        inline std::string Get() const {
                 return info;
-        }
+        };
 };
 
-class codigo_de_apresentacao {
+class Codigo_de_apresentacao {
     //4 digitos de 0 a 9
     private:
         std::string info;
@@ -33,13 +33,13 @@ class codigo_de_apresentacao {
         void Set(string input) throw (invalid_argument){
             Validar(input);
             this->info = input;
-        }
-        inline int Get() const {
+        };
+        inline std::string Get() const {
                 return info;
-        }
+        };
 };
 
-class codigo_de_ingresso {
+class Codigo_de_ingresso {
     //5 digitos de 0 a 9
     private:
         std::string info;
@@ -50,13 +50,13 @@ class codigo_de_ingresso {
         void Set(string input) throw (invalid_argument){
             Validar(input);
             this->info = input;
-        }
-        inline int Get() const {
+        };
+        inline std::string Get() const {
                 return info;
-        }
+        };
 };
 
-class nome_de_evento {
+class Nome_de_evento {
     //20 digitos
     private:
         std::string info;
@@ -67,13 +67,13 @@ class nome_de_evento {
         void Set(string input) throw (invalid_argument){
             Validar(input);
             this->info = input;
-        }
-        inline int Get() const {
+        };
+        inline std::string Get() const {
                 return info;
-        }
+        };
 };
 
-class data {
+class Data {
     //8 digitos DD/MM/AA
     private:
         std::string info;
@@ -84,13 +84,13 @@ class data {
         void Set(string input) throw (invalid_argument){
             Validar(input);
             this->info = input;
-        }
-        inline int Get() const {
+        };
+        inline std::string Get() const {
                 return info;
-        }
+        };
 };
 
-class horario {
+class Horario {
     //5 digitos HH:MM
     private:
         std::string info;
@@ -101,13 +101,13 @@ class horario {
         void Set(string input) throw (invalid_argument){
             Validar(input);
             this->info = input;
-        }
-        inline int Get() const {
+        };
+        inline std::string Get() const {
                 return info;
-        }
+        };
 };
 
-class preco {
+class Preco {
     // de 0 a 1000,00
     private:
         float info;
@@ -118,13 +118,13 @@ class preco {
         void Set(float input) throw (invalid_argument){
             Validar(input);
             this->info = input;
-        }
-        inline int Get() const {
+        };
+        inline float Get() const {
                 return info;
-        }
+        };
 };
 
-class numero_de_sala {
+class Numero_de_sala {
     // 1 a 10
     private:
         int info;
@@ -135,13 +135,13 @@ class numero_de_sala {
         void Set(int input) throw (invalid_argument){
             Validar(input);
             this->info = input;
-        }
+        };
         inline int Get() const {
                 return info;
-        }
+        };
 };
 
-class cidade {
+class Cidade {
     //16 digitos
     private:
         std::string info;
@@ -152,13 +152,13 @@ class cidade {
         void Set(string input) throw (invalid_argument){
             Validar(input);
             this->info = input;
-        }
-        inline int Get() const {
+        };
+        inline std::string Get() const {
                 return info;
-        }
+        };
 };
 
-class estado {
+class Estado {
     //2 letras
     private:
         std::string info;
@@ -169,13 +169,13 @@ class estado {
         void Set(string input) throw (invalid_argument){
             Validar(input);
             this->info = input;
-        }
-        inline int Get() const {
+        };
+        inline std::string Get() const {
                 return info;
-        }
+        };
 };
 
-class disponibilidade {
+class Disponibilidade {
     // 0 a 250
     private:
         int info;
@@ -186,13 +186,13 @@ class disponibilidade {
         void Set(int input) throw (invalid_argument){
             Validar(input);
             this->info = input;
-        }
+        };
         inline int Get() const {
                 return info;
-        }
+        };
 };
 
-class classe_de_evento {
+class Classe_de_evento {
     // 1 a 4
     /* 1 Teatro
        2 Esporte
@@ -207,13 +207,13 @@ class classe_de_evento {
         void Set(int input) throw (invalid_argument){
             Validar(input);
             this->info = input;
-        }
+        };
         inline int Get() const {
                 return info;
-        }
+        };
 };
 
-class faixa_etaria {
+class Faixa_etaria {
     // L, 10, 12, 14, 16, 18
     private:
         std::string info;
@@ -224,13 +224,13 @@ class faixa_etaria {
         void Set(string input) throw (invalid_argument){
             Validar(input);
             this->info = input;
-        }
-        inline int Get() const {
+        };
+        inline std::string Get() const {
                 return info;
-        }
+        };
 };
 
-class cpf {
+class Cpf {
     // XXX.XXX.XXX-XX
     private:
         std::string info;
@@ -241,13 +241,13 @@ class cpf {
         void Set(string input) throw (invalid_argument){
             Validar(input);
             this->info = input;
-        }
-        inline int Get() const {
+        };
+        inline std::string Get() const {
                 return info;
-        }
+        };
 };
 
-class senha {
+class Senha {
     // 6 digitos
     private:
         std::string info;
@@ -258,13 +258,13 @@ class senha {
         void Set(string input) throw (invalid_argument){
             Validar(input);
             this->info = input;
-        }
-        inline int Get() const {
+        };
+        inline std::string Get() const {
                 return info;
-        }
+        };
 };
 
-class cartao_de_credito {
+class Numero_de_cartao_de_credito {
     // 16 digitos
     private:
         std::string info;
@@ -275,13 +275,13 @@ class cartao_de_credito {
         void Set(string input) throw (invalid_argument){
             Validar(input);
             this->info = input;
-        }
-        inline int Get() const {
+        };
+        inline std::string Get() const {
                 return info;
-        }
+        };
 };
 
-class codigo_de_seguranca {
+class Codigo_de_seguranca {
     // 3 digitos
     private:
         std::string info;
@@ -292,13 +292,13 @@ class codigo_de_seguranca {
         void Set(string input) throw (invalid_argument){
             Validar(input);
             this->info = input;
-        }
-        inline int Get() const {
+        };
+        inline std::string Get() const {
                 return info;
-        }
+        };
 };
 
-class data_de_validade {
+class Data_de_validade {
     // 5 digitos DD/MM
     private:
         std::string info;
@@ -309,6 +309,9 @@ class data_de_validade {
         void Set(string input) throw (invalid_argument){
             Validar(input);
             this->info = input;
-        }
+        };
+        inline std::string Get() const {
+                return info;
+        };
 };
 #endif // DOMINIOS_H_INCLUDED
