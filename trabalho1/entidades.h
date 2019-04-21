@@ -93,7 +93,7 @@ class Evento{
 class Apresentacao{
 // cada objeto da classe Apresentação possui como atributo um objeto da classe Codigo_de_Apresentação, Data, Horario, Preço, Número_de_Sala e Disponibilidade
     private:
-        Codigo_de_Apresentação codigo;
+        Codigo_de_Apresentacao codigo;
         Data data;
         Horario horario;
         Preco preco;
@@ -101,11 +101,11 @@ class Apresentacao{
         Disponibilidade disponibilidade;
 
     public:
-        void Set(const Codigo_de_Apresentação &input) throw(invalid_argument){ // seta o codigo de apresentação da apresentação, o input é o código a ser setado
+        void Set(const Codigo_de_Apresentacao &input) throw(invalid_argument){ // seta o codigo de apresentação da apresentação, o input é o código a ser setado
             this->codigo = input;
         }
 
-        inline Codigo_de_Apresentação GetCodigo(){
+        inline Codigo_de_Apresentacao GetCodigo(){
             return codigo;
         }
 
@@ -168,16 +168,16 @@ class Ingresso{
 class Cartao_de_Credito{
 // a classe Cartao_de_Credito possui como atributos objetos das classer numero_de_cartao, codigo_de_seguranca e data_de_validade
     private:
-        Numero_de_Cartao numero;
+        Numero_de_cartao_de_credito numero;
         Codigo_de_Seguranca codigo;
         Data_de_Validade data;
 
     public:
-        void Set(const Numero_de_Cartao &input) throw(invalid_argument){ // seta o número de cartão do cartão, o input é o número setado
+        void Set(const Numero_de_cartao_de_credito &input) throw(invalid_argument){ // seta o número de cartão do cartão, o input é o número setado
             this->numero = input;
         }
 
-        inline Numero_de_Cartao GetNumero(){
+        inline Numero_de_cartao_de_creditoartao GetNumero(){
             return numero;
         }
 

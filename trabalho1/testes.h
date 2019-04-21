@@ -64,4 +64,88 @@ class TUEvento{
         bool RunTesteFaixaEtaria();
 };
 
-#endif
+class TUApresentacao{
+    private:
+    // definição de constantes utilizadas
+        const static std::string VALOR_VALIDO_CODIGO = "0234";
+        const static std::string VALOR_VALIDO_DATA = "02/09/19";
+        const static std::string VALOR_VALIDO_HORARIO = "09:23";
+        const static float VALOR_VALIDO_PRECO = "200,00";
+        const static int VALOR_VALIDO_SALA = "2";
+        const static int VALOR_VALIDO_DISPONIBILIDADE = "40";
+    // objeto a ser testado
+        Apresentacao *apresentacao;
+    // estado do teste
+        bool estado;
+
+        void SetUp();// aloca memória para o objeto usado como teste
+        void TearDown();// desaloca a memória do objeto usado como teste
+        void TestarCodigoApresentacao();
+        void TestarData();
+        void TestarHorario();
+        void TestarPreco();
+        void TestarNumeroSala();
+        void TestarDisponibilidade();
+
+    public:
+    // constantes que indicam o sucesso ou a falha do teste
+        const static bool SUCESSO = true;
+        const static bool FALHA = false;
+
+        bool RunTesteCodigoApresentacao();
+        bool RunTesteData();
+        bool RunTesteHorario();
+        bool RunTestePreco();
+        bool RunTesteNumeroSala();
+        bool RunTesteDisponibilidade();
+};
+
+class TUIngresso{
+    private:
+    // definição das constantes utilizadas
+        const static std::string VALOR_VALIDO_CODIGO = "12346";
+    // objeto a ser testado
+        Ingresso *ingresso;
+    // estado do teste
+        bool estado;
+
+        void SetUp();// aloca memória para o objeto usado como teste
+        void TearDown();// desaloca a memória do objeto usado como teste
+        void TestarCodigoIngresso();
+
+    public:
+    // constantes que indicam o sucesso ou a falha do teste
+        const static bool SUCESSO = true;
+        const static bool FALHA = false;
+
+        bool RunTesteCodigoIngresso();
+};
+
+class TUCartao_de_Credito{
+    private:
+    // definição das constantes utilizadas
+        const static std::string VALOR_VALIDO_NUMERO = "0000000000002311";
+        const static std::string VALOR_VALIDO_CODIGO = "000";
+        const static std::string VALOR_VALIDO_DATA = "10/10";
+    // objeto a ser testado
+        Cartao_de_Credito *cartao;
+    //estado do teste
+        bool estado;
+
+        void SetUp();// aloca memória para o objeto usado como teste
+        void TearDown();// desaloca a memória do objeto usado como teste
+        void TestarNumeroCartao();
+        void TestarCodigoSeguranca();
+        void TestarDataValidade();
+
+    public:
+    // constantes que indicam o sucesso ou a falha do teste
+        const static bool SUCESSO = true;
+        const static bool FALHA = false;
+
+        bool RunTesteNumeroCartao();
+        bool RunTesteCodigoSeguranca();
+        bool RunTesteDataValidade();
+};
+
+#endif// TESTES_H_INCLUDED
