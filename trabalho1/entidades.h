@@ -6,7 +6,7 @@
 #include "dominios.h"
 
 class Usuario{
-  // cada objeto do tipo usuário vai possuir como atributo um objeto do tipo cpf e um objeto do tipo senha
+// cada objeto do tipo usuário vai possuir como atributo um objeto do tipo cpf e um objeto do tipo senha
     private:
         Cpf cpf; // objeto da classe cpf
         Senha senha; // objeto da classe senha
@@ -31,7 +31,7 @@ class Usuario{
 };
 
 class Evento{
-  // cada objeto do tipo evento vai possuir como atributos objetos do tipo codigo_de_evento, nome_de_evento, cidade, estado, classe_de_evento e faixa_etaria
+// cada objeto do tipo evento vai possuir como atributos objetos do tipo codigo_de_evento, nome_de_evento, cidade, estado, classe_de_evento e faixa_etaria
     private:
         Codigo_de_Evento codigo;
         Nome_de_Evento nome;

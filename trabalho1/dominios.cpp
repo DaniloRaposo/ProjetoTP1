@@ -9,68 +9,68 @@ using namespace std;
 
 // Todos os invalidarguments sao input invalido, o catch deve mostrar como deve ser um input correto
 
-void codigo_de_evento::Validar(string input) throw (invalid_argument){
+void Codigo_de_evento::Validar(string input) throw (invalid_argument){
 
     //inicio da investigacao de input
     if (input.length() != 3){
         throw invalid_argument("input invalido");
     }
     //input tem 3 caracteres
-    for(int n = 0, n<3, n++){
+    for(int n = 0; n<3; n++){
         if (isdigit(input[n]) == false){
             throw invalid_argument("input invalido");
         }
     }
 }
 
-void codigo_de_apresentacao::Validar(string input) throw (invalid_argument){
+void Codigo_de_apresentacao::Validar(string input) throw (invalid_argument){
 
     //inicio da investigacao de input
     if (input.length() != 4){
         throw invalid_argument("input invalido");
     }
     //input tem 4 caracteres
-    for(int n = 0, n<4, n++){
+    for(int n = 0; n<4; n++){
         if (isdigit(input[n]) == false){
             throw invalid_argument("input invalido");
         }
     }
 }
 
-void codigo_de_ingresso::Validar(string input) throw (invalid_argument){
+void Codigo_de_ingresso::Validar(string input) throw (invalid_argument){
 
     //inicio da investigacao de input
     if (input.length() != 5){
         throw invalid_argument("input invalido");
     }
     //input tem 5 caracteres
-    for(int n = 0, n<5, n++){
+    for(int n = 0; n<5; n++){
         if (isdigit(input[n]) == false){
             throw invalid_argument("input invalido");
         }
     }
 }
 
-void nome_de_evento::Validar(string input) throw (invalid_argument){
+void Nome_de_evento::Validar(string input) throw (invalid_argument){
 
     //inicio da investigacao de input
-    if (input.length() != 20){
+    if (input.length() > 20){
         throw invalid_argument("input invalido");
     }
-    //input tem 20 caracteres
-    for(int n = 0, n<20, n++){
+    //input tem no max 20 caracteres
+    for(int n = 0; n<input.length(); n++){
         if (isdigit(input[n]) == false && isalpha(input[n]) == false && input[n] != ' '){
             //checa digitos validos
             throw invalid_argument("input invalido");
         }
-        if (n<19 && input[n] == ' ' && input[n+1] == ' '){
+        if (n<input.length()-1 && input[n] == ' ' && input[n+1] == ' '){
             //checa espacos seguidos
             throw invalid_argument("input invalido");
         }
     }
 }
 
-void data::Validar(string input) throw (invalid_argument){
+void Data::Validar(string input) throw (invalid_argument){
     if(input.lenght() != 8){
         throw invalid_argument("input invalido");
     }
@@ -79,7 +79,7 @@ void data::Validar(string input) throw (invalid_argument){
         throw invalid_argument("input invalido");
     }
 
-    for(int n = 0, n<8, n++){
+    for(int n = 0; n<8; n++){
         if(n == 2 || n == 5) n++;
         if (isdigit(input[n]) == false){
             throw invalid_argument("input invalido");
@@ -101,8 +101,8 @@ void data::Validar(string input) throw (invalid_argument){
         }
     }
     else if(mes == 2){
-        /*Como ano deve estar entre 2000 e 2099, o cálculo do ano bissexto pode ser simplificado
-        para apenas a congruência com 4*/
+        /*Como ano deve estar entre 2000 e 2099, o cï¿½lculo do ano bissexto pode ser simplificado
+        para apenas a congruï¿½ncia com 4*/
         if(ano%4 != 0){
             if(dia<1 || dia>28){
                 throw invalid_argument("input invalido");
@@ -117,7 +117,7 @@ void data::Validar(string input) throw (invalid_argument){
     else throw invalid_argument("input invalido"); //mes invalido
 }
 
-void horario::Validar(string input) throw (invalid_argument){
+void Horario::Validar(string input) throw (invalid_argument){
     if(input.lenght() != 5){
         throw invalid_argument("input invalido");
     }
@@ -126,7 +126,7 @@ void horario::Validar(string input) throw (invalid_argument){
         throw invalid_argument("input invalido");
     }
 
-    for(int n = 0, n<5, n++){
+    for(int n = 0; n<5; n++){
         if(n == 2) n++;
         if (isdigit(input[n]) == false){
             throw invalid_argument("input invalido");
@@ -145,27 +145,32 @@ void horario::Validar(string input) throw (invalid_argument){
     }
 }
 
-void preco::Validar(float input) throw (invalid_argument){
+void Preco::Validar(float input) throw (invalid_argument){
     input = floorf(input * 100) / 100; //arredonda para duas casas decimais
     if ( 0 < input || input > 1000){
         throw invalid_argument("input invalido");
     }
 }
 
-void numero_de_sala::Validar(int input) throw (invalid_argument){
+void Numero_de_sala::Validar(int input) throw (invalid_argument){
     if ( 1 < input || input > 10){
         throw invalid_argument("input invalido");
     }
 }
 
-void cidade::Validar(string input) throw (invalid_argument){
+void Cidade::Validar(string input) throw (invalid_argument){
 
     //inicio da investigacao de input
-    if (input.length() != 16){
+    if (input.length() > 16){
         throw invalid_argument("input invalido");
     }
-    //input tem 16 caracteres
-    for(int n = 0, n<16, n++){
+
+    if (isalpha(input[0]) == false){
+        throw invalid_argument("input invalido");
+    }
+    
+    //input tem no max 16 caracteres
+    for(int n = 0; n<input.length(); n++){
         if (isalpha(input[n]) == false && input[n] != '.' && input[n] != ' '){
             //checa digitos validos
             throw invalid_argument("input invalido");
@@ -174,15 +179,15 @@ void cidade::Validar(string input) throw (invalid_argument){
             //checa se alpha precede ponto
             throw invalid_argument("input invalido");
         }
-        if (n<19 && input[n] == ' ' && input[n+1] == ' '){
+        if (n<input.length()-1 && input[n] == ' ' && input[n+1] == ' '){
             //checa espacos seguidos
             throw invalid_argument("input invalido");
         }
-        //nao é necessário checar se tem no min uma letra, pois isso é uma regra emergente
+        //nao ï¿½ necessï¿½rio checar se tem no min uma letra, pois isso ï¿½ uma regra emergente
     }
 }
 
-void estado::Validar(string input) throw (invalid_argument){
+void Estado::Validar(string input) throw (invalid_argument){
 
     /*AC, AL, AP, AM, BA, CE, DF, ES, GO, MA, MT, MS, MG, PA,
       PB, PR, PE, PI, RJ, RN, RS, RO, RR, SC, SP, SE, TO*/
@@ -196,21 +201,21 @@ void estado::Validar(string input) throw (invalid_argument){
     }
 }
 
-void disponibilidade::Validar(int input) throw (invalid_argument){
+void Disponibilidade::Validar(int input) throw (invalid_argument){
 
     if ( 0 < input || input > 250){
         throw invalid_argument("input invalido");
     }
 }
 
-void classe_de_evento::Validar(int input) throw (invalid_argument){
+void Classe_de_evento::Validar(int input) throw (invalid_argument){
 
     if ( 1 < input || input > 4){
         throw invalid_argument("input invalido");
     }
 }
 
-void faixa_etaria::Validar(string input) throw (invalid_argument){
+void Faixa_etaria::Validar(string input) throw (invalid_argument){
 
     /*AC, AL, AP, AM, BA, CE, DF, ES, GO, MA, MT, MS, MG, PA,
       PB, PR, PE, PI, RJ, RN, RS, RO, RR, SC, SP, SE, TO*/
@@ -219,12 +224,12 @@ void faixa_etaria::Validar(string input) throw (invalid_argument){
     }
 }
 
-void cpf::Validar(string input) throw (invalid_argument){
+void Cpf::Validar(string input) throw (invalid_argument){
 
     // XXX.XXX.XXX-XX
     // 01234567890123
 
-    // 111.444.777-35 é válido, por exemplo
+    // 111.444.777-35 ï¿½ vï¿½lido, por exemplo
 
     if (input.length() != 14){
         throw invalid_argument("input invalido");
@@ -234,20 +239,20 @@ void cpf::Validar(string input) throw (invalid_argument){
         throw invalid_argument("input invalido");
     }
 
-    for(int n = 0, n<14, n++){
+    for(int n = 0; n<14; n++){
         if(n=3 || n=7 || n=11) n++;
         if (isdigit(input[n]) == false){
             throw invalid_argument("input invalido");
         }
     }
-    // a partir daqui só falta checar digitos verificadores
+    // a partir daqui sï¿½ falta checar digitos verificadores
 
 
     int soma = 0;
     int multiplicador = 10;
 
     //checa digito verificador 1
-    for(int n = 0, n<11, n++){
+    for(int n = 0; n<11; n++){
         if(n=3 || n=7 || n=11) n++;
         soma += multiplicador * (int (input[n] - '0'))
         multiplicador--;
@@ -280,27 +285,33 @@ void cpf::Validar(string input) throw (invalid_argument){
     }
 }
 
-void senha::Validar(string input) throw (invalid_argument){
+void Senha::Validar(string input) throw (invalid_argument){
 
     //inicio da investigacao de input
-    if (input.length() != 6){
-        throw invalid_argument("input invalido");
-    }
+    if (input.length() != 6) throw invalid_argument("input invalido");
+
     int upper = 0, lower = 0, digit = 0;
-    for(int n = 0, n<6, n++){
+    for(int n = 0; n<6; n++){
         // checa digitos validos
         if (isalpha(input[n]) == false && isdigit(input[n]) == false) throw invalid_argument("input invalido");
 
         if ( isupper(input[n]) == true ) upper++;
         if ( islower(input[n]) == true ) lower++;
         if ( isdigit(input[n]) == true ) digit++;
-        //nao é necessário checar se tem no min uma letra, pois isso é uma regra emergente
+        //nao eh necessario checar se tem no min uma letra, pois isso eh uma regra emergente
     }
 
     if( upper == 0 || lower == 0 || digit == 0 )  throw invalid_argument("input invalido");
+
+    for(int n = 0; n<5; n++){
+        // checa se ha caracteres repetidos
+        for(int a = n+1; a<6; a++){
+            if (input[a] == input[n]) throw invalid_argument("input invalido");
+        }
+    }
 }
 
-void cartao_de_credito::Validar(string input) throw (invalid_argument){
+void Numero_de_cartao_de_credito::Validar(string input) throw (invalid_argument){
 
     if (input.length() != 16){
         throw invalid_argument("input invalido");
@@ -328,19 +339,16 @@ void cartao_de_credito::Validar(string input) throw (invalid_argument){
 
 };
 
-void codigo_de_seguranca::Validar(string input) throw (invalid_argument){
+void Codigo_de_seguranca::Validar(string input) throw (invalid_argument){
 
-    if (input.length() != 3){
-        throw invalid_argument("input invalido");
-    }
+    if (input.length() != 3) throw invalid_argument("input invalido");
+    
     for(int n = 0; n < 3; n++){
-        if (isdigit(input[n]) == false){
-            throw invalid_argument("input invalido");
-        }
+        if (isdigit(input[n]) == false) throw invalid_argument("input invalido");
     }
 };
 
-void data_de_validade::Validar(string input) throw (invalid_argument){
+void Data_de_validade::Validar(string input) throw (invalid_argument){
 
     // MM/AA
     // 01234
@@ -353,7 +361,7 @@ void data_de_validade::Validar(string input) throw (invalid_argument){
         throw invalid_argument("input invalido");
     }
 
-    for(int n = 0, n<5, n++){
+    for(int n = 0; n<5; n++){
         if(n == 2) n++;
         if (isdigit(input[n]) == false){
             throw invalid_argument("input invalido");
