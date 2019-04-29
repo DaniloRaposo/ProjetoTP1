@@ -18,8 +18,8 @@ class TUCodigo_de_evento{
 
     // especificos do dominio  
 
-    const static std::string VALOR_VALIDO   = "123";
-    const static std::string VALOR_INVALIDO = "12c";
+    const std::string VALOR_VALIDO   = "123";
+    const std::string VALOR_INVALIDO = "12c";
 
     Codigo_de_evento *codigo_de_evento;      
 
@@ -44,7 +44,7 @@ class TUCodigo_de_evento{
         tearDown();
         return estado;
     };
-}
+};
 
 class TUCodigo_de_apresentacao{
     private:
@@ -58,8 +58,8 @@ class TUCodigo_de_apresentacao{
 
     // especificos do dominio  
 
-    const static std::string VALOR_VALIDO   = "1234";
-    const static std::string VALOR_INVALIDO = "123d";
+    const std::string VALOR_VALIDO   = "1234";
+    const std::string VALOR_INVALIDO = "123d";
 
     Codigo_de_apresentacao *codigo_de_apresentacao;      
 
@@ -84,7 +84,7 @@ class TUCodigo_de_apresentacao{
         tearDown();
         return estado;
     };
-}
+};
 
 class TUCodigo_de_ingresso{
     private:
@@ -98,8 +98,8 @@ class TUCodigo_de_ingresso{
 
     // especificos do dominio  
 
-    const static std::string VALOR_VALIDO   = "12345";
-    const static std::string VALOR_INVALIDO = "1234e";
+    const std::string VALOR_VALIDO   = "12345";
+    const std::string VALOR_INVALIDO = "1234e";
 
     Codigo_de_ingresso *codigo_de_ingresso;     
 
@@ -124,7 +124,7 @@ class TUCodigo_de_ingresso{
         tearDown();
         return estado;
     };
-}
+};
 
 class TUNome_de_evento{
     private:
@@ -138,8 +138,8 @@ class TUNome_de_evento{
 
     // especificos do dominio  
 
-    const static std::string VALOR_VALIDO   = "Jorge Party";
-    const static std::string VALOR_INVALIDO = "Jorge  Party";
+    const std::string VALOR_VALIDO   = "Jorge Party";
+    const std::string VALOR_INVALIDO = "Jorge  Party";
 
     Nome_de_evento *nome_de_evento;   
 
@@ -164,7 +164,7 @@ class TUNome_de_evento{
         tearDown();
         return estado;
     };
-}
+};
 
 class TUData{
     private:
@@ -178,8 +178,8 @@ class TUData{
 
     // especificos do dominio  
 
-    const static std::string VALOR_VALIDO   = "29/02/23";
-    const static std::string VALOR_INVALIDO = "29/02/24";
+    const std::string VALOR_VALIDO   = "29/02/23";
+    const std::string VALOR_INVALIDO = "29/02/24";
 
     Data *data;     
 
@@ -204,7 +204,7 @@ class TUData{
         tearDown();
         return estado;
     };
-}
+};
 
 class TUHorario{
     private:
@@ -218,8 +218,8 @@ class TUHorario{
 
     // especificos do dominio  
 
-    const static std::string VALOR_VALIDO   = "22:45";
-    const static std::string VALOR_INVALIDO = "23:00";
+    const std::string VALOR_VALIDO   = "22:45";
+    const std::string VALOR_INVALIDO = "23:00";
 
     Horario *horario;       
 
@@ -244,7 +244,7 @@ class TUHorario{
         tearDown();
         return estado;
     };
-}
+};
 
 class TUPreco{
     private:
@@ -284,7 +284,7 @@ class TUPreco{
         tearDown();
         return estado;
     };
-}
+};
 
 class TUNumero_de_sala{
     private:
@@ -298,8 +298,8 @@ class TUNumero_de_sala{
 
     // especificos do dominio  
 
-    const static int VALOR_VALIDO   = 10;
-    const static int VALOR_INVALIDO = 11;
+    const int VALOR_VALIDO   = 10;
+    const int VALOR_INVALIDO = 11;
 
     Numero_de_sala *numero_de_sala;       
 
@@ -324,7 +324,7 @@ class TUNumero_de_sala{
         tearDown();
         return estado;
     };
-}
+};
 
 class TUCidade{
     private:
@@ -338,8 +338,8 @@ class TUCidade{
 
     // especificos do dominio  
 
-    const static std::string VALOR_VALIDO   = "Frankenmuth. ";
-    const static std::string VALOR_INVALIDO = "Frankenmuth.  ";
+    const std::string VALOR_VALIDO   = "Frankenmuth. ";
+    const std::string VALOR_INVALIDO = "Frankenmuth.  ";
 
     Cidade *cidade;       
 
@@ -364,7 +364,7 @@ class TUCidade{
         tearDown();
         return estado;
     };
-}
+};
 
 class TUEstado{
     private:
@@ -378,8 +378,8 @@ class TUEstado{
 
     // especificos do dominio  
 
-    const static std::string VALOR_VALIDO   = "PI";
-    const static std::string VALOR_INVALIDO = "XX";
+    const std::string VALOR_VALIDO   = "PI";
+    const std::string VALOR_INVALIDO = "XX";
 
     Estado *estadoObj;       
 
@@ -404,7 +404,7 @@ class TUEstado{
         tearDown();
         return estado;
     };
-}
+};
 
 class TUDisponibilidade{
     private:
@@ -444,7 +444,7 @@ class TUDisponibilidade{
         tearDown();
         return estado;
     };
-}
+};
 
 class TUClasse_de_evento{
     private:
@@ -484,7 +484,7 @@ class TUClasse_de_evento{
         tearDown();
         return estado;
     };
-}
+};
 
 class TUFaixa_etaria{
     private:
@@ -498,8 +498,8 @@ class TUFaixa_etaria{
 
     // especificos do dominio  
 
-    const static std::string VALOR_VALIDO   = "16";
-    const static std::string VALOR_INVALIDO = "17";
+    const std::string VALOR_VALIDO   = "16";
+    const std::string VALOR_INVALIDO = "17";
 
     Faixa_etaria *faixa_etaria;       
 
@@ -524,7 +524,7 @@ class TUFaixa_etaria{
         tearDown();
         return estado;
     };
-}
+};
 
 class TUCpf{
     private:
@@ -538,8 +538,8 @@ class TUCpf{
 
     // especificos do dominio  
 
-    const static std::string VALOR_VALIDO   = "111.444.777-35";
-    const static std::string VALOR_INVALIDO = "000.000.002-00";
+    const std::string VALOR_VALIDO   = "111.444.777-35";
+    const std::string VALOR_INVALIDO = "000.000.002-00";
 
     Cpf *cpf;       
 
@@ -564,7 +564,7 @@ class TUCpf{
         tearDown();
         return estado;
     };
-}
+};
 
 class TUSenha{
     private:
@@ -578,8 +578,8 @@ class TUSenha{
 
     // especificos do dominio  
 
-    const static std::string VALOR_VALIDO   = "A1abcd";
-    const static std::string VALOR_INVALIDO = "A1abcc";
+    const std::string VALOR_VALIDO   = "A1abcd";
+    const std::string VALOR_INVALIDO = "A1abcc";
 
     Senha *senha;       
 
@@ -604,7 +604,7 @@ class TUSenha{
         tearDown();
         return estado;
     };
-}
+};
 
 class TUNumero_de_cartao_de_credito{
     private:
@@ -618,8 +618,8 @@ class TUNumero_de_cartao_de_credito{
 
     // especificos do dominio 
 
-    const static std::string VALOR_VALIDO   = "0000000000002311";
-    const static std::string VALOR_INVALIDO = "0000000000002310";
+    const std::string VALOR_VALIDO   = "0000000000002311";
+    const std::string VALOR_INVALIDO = "0000000000002310";
 
     Numero_de_cartao_de_credito *numero_de_cartao_de_credito;       
 
@@ -644,7 +644,7 @@ class TUNumero_de_cartao_de_credito{
         tearDown();
         return estado;
     };
-}
+};
 
 class TUCodigo_de_seguranca{
     private:
@@ -658,8 +658,8 @@ class TUCodigo_de_seguranca{
 
     // especificos do dominio 
 
-    const static std::string VALOR_VALIDO   = "000";
-    const static std::string VALOR_INVALIDO = "00a";
+    const std::string VALOR_VALIDO   = "000";
+    const std::string VALOR_INVALIDO = "00a";
 
     Codigo_de_seguranca *codigo_de_seguranca;       
 
@@ -684,7 +684,7 @@ class TUCodigo_de_seguranca{
         tearDown();
         return estado;
     };
-}
+};
 
 class TUData_de_validade{
     private:
@@ -698,8 +698,8 @@ class TUData_de_validade{
 
     // especificos do dominio 
 
-    const static std::string VALOR_VALIDO   = "12/20";
-    const static std::string VALOR_INVALIDO = "13/20";
+    const std::string VALOR_VALIDO   = "12/20";
+    const std::string VALOR_INVALIDO = "13/20";
 
     Data_de_validade *data_de_validade;       
 

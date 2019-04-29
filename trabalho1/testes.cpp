@@ -27,7 +27,7 @@ void TUUsuario::TestarCpf(){
         else
             estado = FALHA;
     }
-    catch{
+    catch(std::exception &e){
         estado = FALHA;
     }
 }
@@ -36,14 +36,14 @@ void TUUsuario::TestarSenha(){
     Senha senha_auxiliar;// objeto auxiliar para dar um Usuario::Set
 
     try{
-        senha_auxiliar.Set(VALOR_VALIDO_SENHA) // seta o atributo da senha para o valor valido
+        senha_auxiliar.Set(VALOR_VALIDO_SENHA); // seta o atributo da senha para o valor valido
         usuario->Set(senha_auxiliar); // seta a senha do usuario como a senha auxiliar
         if(usuario->GetSenha().Get() == VALOR_VALIDO_SENHA)
             estado = SUCESSO;
         else
             estado = FALHA;
     }
-    catch{
+    catch(std::exception &e){
         estado = FALHA;
     }
 }
@@ -77,7 +77,7 @@ void TUEvento::TearDown(){
 }
 
 void TUEvento::TestarCodigoEvento(){
-    Codigo_de_Evento codigo_auxiliar; // objeto auxiliar para dar um Evento::Set
+    Codigo_de_evento codigo_auxiliar; // objeto auxiliar para dar um Evento::Set
 
     try{
         codigo_auxiliar.Set(VALOR_VALIDO_CODIGO); // seta o atributo do codigo de evento para o valor valido
@@ -87,13 +87,13 @@ void TUEvento::TestarCodigoEvento(){
         else
             estado = FALHA;
     }
-    catch{
+    catch(std::exception &e){
         estado = FALHA;
     }
 }
 
 void TUEvento::TestarNomeEvento(){
-    Nome_de_Evento nome_auxiliar; // objeto auxiliar para dar um Evento::Set
+    Nome_de_evento nome_auxiliar; // objeto auxiliar para dar um Evento::Set
 
     try{
         nome_auxiliar.Set(VALOR_VALIDO_NOME); // seta o atributo do nome de evento para o valor valido
@@ -103,7 +103,7 @@ void TUEvento::TestarNomeEvento(){
         else
             estado = FALHA;
     }
-    catch{
+    catch(std::exception &e){
         estado = FALHA;
     }
 }
@@ -119,7 +119,7 @@ void TUEvento::TestarCidade(){
         else
             estado = FALHA;
     }
-    catch{
+    catch(std::exception &e){
         estado = FALHA;
     }
 }
@@ -135,13 +135,13 @@ void TUEvento::TestarEstado(){
         else
             estado = FALHA;
     }
-    catch{
+    catch(std::exception &e){
         estado = FALHA;
     }
 }
 
 void TUEvento::TestarClasseEvento(){
-    Classe_de_Evento classe_auxiliar; // objeto auxiliar para dar um Evento::Set
+    Classe_de_evento classe_auxiliar; // objeto auxiliar para dar um Evento::Set
 
     try{
         classe_auxiliar.Set(VALOR_VALIDO_CLASSE);// seta o atributo da classe para o valor valido
@@ -151,13 +151,13 @@ void TUEvento::TestarClasseEvento(){
         else
             estado = FALHA;
     }
-    catch{
+    catch(std::exception &e){
         estado = FALHA;
     }
 }
 
 void TUEvento::TestarFaixaEtaria(){
-    Faixa_Etaria faixa_auxiliar;// objeto auxiliar para dar um Evento::Set
+    Faixa_etaria faixa_auxiliar;// objeto auxiliar para dar um Evento::Set
 
     try{
         faixa_auxiliar.Set(VALOR_VALIDO_FAIXA);// seta o atributo da faixa para o valor valido
@@ -167,7 +167,7 @@ void TUEvento::TestarFaixaEtaria(){
         else
             estado = FALHA;
     }
-    catch{
+    catch(std::exception &e){
         estado = FALHA;
     }
 }
@@ -224,7 +224,7 @@ void TUApresentacao::TearDown(){
 }
 
 void TUApresentacao::TestarCodigoApresentacao(){
-    Codigo_de_Apresentacao codigo_auxiliar; // objeto auxiliar para dar um Apresentacao::Set
+    Codigo_de_apresentacao codigo_auxiliar; // objeto auxiliar para dar um Apresentacao::Set
 
     try{
         codigo_auxiliar.Set(VALOR_VALIDO_CODIGO); // seta o atributo do codigo de apresentacao para o valor válido
@@ -234,7 +234,7 @@ void TUApresentacao::TestarCodigoApresentacao(){
         else
             estado = FALHA;
     }
-    catch{
+    catch(std::exception &e){
         estado = FALHA;
     }
 }
@@ -250,7 +250,7 @@ void TUApresentacao::TestarData(){
         else
             estado = FALHA;
     }
-    catch{
+    catch(std::exception &e){
         estado = FALHA;
     }
 }
@@ -266,7 +266,7 @@ void TUApresentacao::TestarHorario(){
         else
             estado = FALHA;
     }
-    catch{
+    catch(std::exception &e){
         estado = FALHA;
     }
 }
@@ -282,13 +282,13 @@ void TUApresentacao::TestarPreco(){
         else
             estado = FALHA;
     }
-    catch{
+    catch(std::exception &e){
         estado = FALHA;
     }
 }
 
 void TUApresentacao::TestarNumeroSala(){
-    Numero_de_Sala sala_auxiliar; // objeto auxiliar para dar um Apresentacao::Set
+    Numero_de_sala sala_auxiliar; // objeto auxiliar para dar um Apresentacao::Set
 
     try{
         sala_auxiliar.Set(VALOR_VALIDO_SALA); // seta o atributo do numero da sala para o valor válido
@@ -298,7 +298,7 @@ void TUApresentacao::TestarNumeroSala(){
         else
             estado = FALHA;
     }
-    catch{
+    catch(std::exception &e){
         estado = FALHA;
     }
 }
@@ -314,7 +314,7 @@ void TUApresentacao::TestarDisponibilidade(){
         else
             estado = FALHA;
     }
-    catch{
+    catch(std::exception &e){
         estado = FALHA;
     }
 }
@@ -371,7 +371,7 @@ void TUIngresso::TearDown(){
 }
 
 void TUIngresso::TestarCodigoIngresso(){
-     Codigo_de_Ingresso codigo_auxiliar; // objeto auxiliar para dar um Ingresso::Set
+     Codigo_de_ingresso codigo_auxiliar; // objeto auxiliar para dar um Ingresso::Set
 
     try{
         codigo_auxiliar.Set(VALOR_VALIDO_CODIGO); // seta o atributo do codigo de ingresso para o valor válido
@@ -381,14 +381,14 @@ void TUIngresso::TestarCodigoIngresso(){
         else
             estado = FALHA;
     }
-    catch{
+    catch(std::exception &e){
         estado = FALHA;
     }
 }
 
 bool TUIngresso::RunTesteCodigoIngresso(){
     SetUp(); // aloca memoria para um objeto do tipo ingresso
-    TestarDisponibilidade(); // caso de teste do codigo de ingresso
+    TestarCodigoIngresso(); // caso de teste do codigo de ingresso
     TearDown(); // desaloca memoria do objeto do tipo ingresso
     return estado; // retorna resultado do teste
 }
@@ -413,13 +413,13 @@ void TUCartao_de_Credito::TestarNumeroCartao(){
         else
             estado = FALHA;
     }
-    catch{
+    catch(std::exception &e){
         estado = FALHA;
     }
 }
 
 void TUCartao_de_Credito::TestarCodigoSeguranca(){
-     Codigo_de_Seguranca codigo_auxiliar; // objeto auxiliar para dar um Cartao_de_Credito::Set
+     Codigo_de_seguranca codigo_auxiliar; // objeto auxiliar para dar um Cartao_de_Credito::Set
 
     try{
         codigo_auxiliar.Set(VALOR_VALIDO_CODIGO); // seta o atributo do codigo de seguranca para o valor válido
@@ -429,13 +429,13 @@ void TUCartao_de_Credito::TestarCodigoSeguranca(){
         else
             estado = FALHA;
     }
-    catch{
+    catch(std::exception &e){
         estado = FALHA;
     }
 }
 
 void TUCartao_de_Credito::TestarDataValidade(){
-     Data_de_Validade data_auxiliar; // objeto auxiliar para dar um Cartao_de_Credito::Set
+     Data_de_validade data_auxiliar; // objeto auxiliar para dar um Cartao_de_Credito::Set
 
     try{
         data_auxiliar.Set(VALOR_VALIDO_DATA); // seta o atributo da data de validade para o valor válido
@@ -445,7 +445,7 @@ void TUCartao_de_Credito::TestarDataValidade(){
         else
             estado = FALHA;
     }
-    catch{
+    catch(std::exception &e){
         estado = FALHA;
     }
 }

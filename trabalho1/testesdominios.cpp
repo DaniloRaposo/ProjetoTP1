@@ -9,7 +9,7 @@
             if (codigo_de_evento->Get() != VALOR_VALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -20,7 +20,7 @@
             if (codigo_de_evento->Get() == VALOR_INVALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -33,7 +33,7 @@
             if (codigo_de_apresentacao->Get() != VALOR_VALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -44,7 +44,7 @@
             if (codigo_de_apresentacao->Get() == VALOR_INVALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -57,7 +57,7 @@
             if (codigo_de_ingresso->Get() != VALOR_VALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -68,7 +68,7 @@
             if (codigo_de_ingresso->Get() == VALOR_INVALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -81,7 +81,7 @@
             if (nome_de_evento->Get() != VALOR_VALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -92,7 +92,7 @@
             if (nome_de_evento->Get() == VALOR_INVALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -105,7 +105,7 @@
             if (data->Get() != VALOR_VALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -116,7 +116,7 @@
             if (data->Get() == VALOR_INVALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -129,7 +129,7 @@
             if (horario->Get() != VALOR_VALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -140,7 +140,7 @@
             if (horario->Get() == VALOR_INVALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -153,7 +153,7 @@
             if (preco->Get() != VALOR_VALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -164,7 +164,7 @@
             if (preco->Get() == VALOR_INVALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -177,7 +177,7 @@
             if (numero_de_sala->Get() != VALOR_VALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -188,7 +188,7 @@
             if (numero_de_sala->Get() == VALOR_INVALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -201,7 +201,7 @@
             if (cidade->Get() != VALOR_VALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -212,7 +212,7 @@
             if (cidade->Get() == VALOR_INVALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -225,7 +225,7 @@
             if (estadoObj->Get() != VALOR_VALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -236,7 +236,7 @@
             if (estadoObj->Get() == VALOR_INVALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -249,7 +249,7 @@
             if (disponibilidade->Get() != VALOR_VALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -260,7 +260,7 @@
             if (disponibilidade->Get() == VALOR_INVALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -273,7 +273,7 @@
             if (classe_de_evento->Get() != VALOR_VALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -284,7 +284,7 @@
             if (classe_de_evento->Get() == VALOR_INVALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -297,7 +297,7 @@
             if (faixa_etaria->Get() != VALOR_VALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -308,7 +308,7 @@
             if (faixa_etaria->Get() == VALOR_INVALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -321,7 +321,7 @@
             if (cpf->Get() != VALOR_VALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -332,7 +332,7 @@
             if (cpf->Get() == VALOR_INVALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -345,7 +345,7 @@
             if (senha->Get() != VALOR_VALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -356,7 +356,7 @@
             if (senha->Get() == VALOR_INVALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -369,7 +369,7 @@
             if (numero_de_cartao_de_credito->Get() != VALOR_VALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -380,7 +380,7 @@
             if (numero_de_cartao_de_credito->Get() == VALOR_INVALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -393,7 +393,7 @@
             if (codigo_de_seguranca->Get() != VALOR_VALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -404,7 +404,7 @@
             if (codigo_de_seguranca->Get() == VALOR_INVALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -417,7 +417,7 @@
             if (data_de_validade->Get() != VALOR_VALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }
@@ -428,7 +428,7 @@
             if (data_de_validade->Get() == VALOR_INVALIDO)
                 estado = FALHA;
         }
-        catch(invalid_argument "input invalido"){
+        catch(std::exception &e){
             estado = FALHA;
         }
     }

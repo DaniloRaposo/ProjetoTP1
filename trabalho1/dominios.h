@@ -10,10 +10,10 @@ class Codigo_de_evento {
     private:
         std::string info;
 
-        void Validar(string input) throw (invalid_argument);
+        void Validar(string input) noexcept(false);
 
     public:
-        void Set(string input) throw (invalid_argument){
+        void Set(string input) noexcept(false){
             Validar(input);
             this->info = input;
         };
@@ -27,10 +27,10 @@ class Codigo_de_apresentacao {
     private:
         std::string info;
 
-        void Validar(string input) throw (invalid_argument);
+        void Validar(string input) noexcept(false);
 
     public:
-        void Set(string input) throw (invalid_argument){
+        void Set(string input) noexcept(false){
             Validar(input);
             this->info = input;
         };
@@ -44,10 +44,10 @@ class Codigo_de_ingresso {
     private:
         std::string info;
 
-        void Validar(string input) throw (invalid_argument);
+        void Validar(string input) noexcept(false);
 
     public:
-        void Set(string input) throw (invalid_argument){
+        void Set(string input) noexcept(false){
             Validar(input);
             this->info = input;
         };
@@ -61,10 +61,10 @@ class Nome_de_evento {
     private:
         std::string info;
 
-        void Validar(string input) throw (invalid_argument);
+        void Validar(string input) noexcept(false);
 
     public:
-        void Set(string input) throw (invalid_argument){
+        void Set(string input) noexcept(false){
             Validar(input);
             this->info = input;
         };
@@ -78,10 +78,10 @@ class Data {
     private:
         std::string info;
 
-        void Validar(string input) throw (invalid_argument);
+        void Validar(string input) noexcept(false);
 
     public:
-        void Set(string input) throw (invalid_argument){
+        void Set(string input) noexcept(false){
             Validar(input);
             this->info = input;
         };
@@ -95,10 +95,10 @@ class Horario {
     private:
         std::string info;
 
-        void Validar(string input) throw (invalid_argument);
+        void Validar(string input) noexcept(false);
 
     public:
-        void Set(string input) throw (invalid_argument){
+        void Set(string input) noexcept(false){
             Validar(input);
             this->info = input;
         };
@@ -112,10 +112,10 @@ class Preco {
     private:
         float info;
 
-        void Validar(float input) throw (invalid_argument);
+        void Validar(float input) noexcept(false);
 
     public:
-        void Set(float input) throw (invalid_argument){
+        void Set(float input) noexcept(false){
             Validar(input);
             this->info = input;
         };
@@ -129,10 +129,10 @@ class Numero_de_sala {
     private:
         int info;
 
-        void Validar(int input) throw (invalid_argument);
+        void Validar(int input) noexcept(false);
 
     public:
-        void Set(int input) throw (invalid_argument){
+        void Set(int input) noexcept(false){
             Validar(input);
             this->info = input;
         };
@@ -146,10 +146,10 @@ class Cidade {
     private:
         std::string info;
 
-        void Validar(string input) throw (invalid_argument);
+        void Validar(string input) noexcept(false);
 
     public:
-        void Set(string input) throw (invalid_argument){
+        void Set(string input) noexcept(false){
             Validar(input);
             this->info = input;
         };
@@ -163,10 +163,10 @@ class Estado {
     private:
         std::string info;
 
-        void Validar(string input) throw (invalid_argument);
+        void Validar(string input) noexcept(false);
 
     public:
-        void Set(string input) throw (invalid_argument){
+        void Set(string input) noexcept(false){
             Validar(input);
             this->info = input;
         };
@@ -180,10 +180,10 @@ class Disponibilidade {
     private:
         int info;
 
-        void Validar(int input) throw (invalid_argument);
+        void Validar(int input) noexcept(false);
 
     public:
-        void Set(int input) throw (invalid_argument){
+        void Set(int input) noexcept(false){
             Validar(input);
             this->info = input;
         };
@@ -201,10 +201,10 @@ class Classe_de_evento {
     private:
         int info;
 
-        void Validar(int input) throw (invalid_argument);
+        void Validar(int input) noexcept(false);
 
     public:
-        void Set(int input) throw (invalid_argument){
+        void Set(int input) noexcept(false){
             Validar(input);
             this->info = input;
         };
@@ -218,10 +218,10 @@ class Faixa_etaria {
     private:
         std::string info;
 
-        void Validar(string input) throw (invalid_argument);
+        void Validar(string input) noexcept(false);
 
     public:
-        void Set(string input) throw (invalid_argument){
+        void Set(string input) noexcept(false){
             Validar(input);
             this->info = input;
         };
@@ -235,10 +235,10 @@ class Cpf {
     private:
         std::string info;
 
-        void Validar(string input) throw (invalid_argument);
+        void Validar(string input) noexcept(false);
 
     public:
-        void Set(string input) throw (invalid_argument){
+        void Set(string input) noexcept(false){
             Validar(input);
             this->info = input;
         };
@@ -252,10 +252,10 @@ class Senha {
     private:
         std::string info;
 
-        void Validar(string input) throw (invalid_argument);
+        void Validar(string input) noexcept(false);
 
     public:
-        void Set(string input) throw (invalid_argument){
+        void Set(string input) noexcept(false){
             Validar(input);
             this->info = input;
         };
@@ -269,10 +269,10 @@ class Numero_de_cartao_de_credito {
     private:
         std::string info;
 
-        void Validar(string input) throw (invalid_argument);
+        void Validar(string input) noexcept(false);
 
     public:
-        void Set(string input) throw (invalid_argument){
+        void Set(string input) noexcept(false){
             Validar(input);
             this->info = input;
         };
@@ -286,10 +286,10 @@ class Codigo_de_seguranca {
     private:
         std::string info;
 
-        void Validar(string input) throw (invalid_argument);
+        void Validar(string input) noexcept(false);
 
     public:
-        void Set(string input) throw (invalid_argument){
+        void Set(string input) noexcept(false){
             Validar(input);
             this->info = input;
         };
@@ -303,10 +303,10 @@ class Data_de_validade {
     private:
         std::string info;
 
-        void Validar(string input) throw (invalid_argument);
+        void Validar(string input) noexcept(false);
 
     public:
-        void Set(string input) throw (invalid_argument){
+        void Set(string input) noexcept(false){
             Validar(input);
             this->info = input;
         };
