@@ -264,7 +264,7 @@ void TUApresentacao::TestarData(){
 
 void TUApresentacao::TestarHorario(){
     Horario horario_auxiliar; // objeto auxiliar para dar um Apresentacao::Set
-    VALOR_VALIDO_HORARIO = "09:23";
+    VALOR_VALIDO_HORARIO = "09:30";
     try{
         horario_auxiliar.Set(VALOR_VALIDO_HORARIO); // seta o atributo do horario para o valor válido
         apresentacao->Set(horario_auxiliar); // seta o horario da apresentacao como o horario auxiliar

@@ -141,7 +141,7 @@ void Horario::Validar(string input) throw (invalid_argument){
         throw invalid_argument("input invalido");
     }
 
-    if(minuto != 00 && minuto && 15 && minuto && 30 && minuto != 45){
+    if(minuto != 00 && minuto != 15 && minuto != 30 && minuto != 45){
         throw invalid_argument("input invalido");
     }
 }

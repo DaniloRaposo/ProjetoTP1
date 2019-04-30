@@ -31,6 +31,8 @@ int main(){
     TUCodigo_de_seguranca           testeCodigo_de_seguranca;
     TUData_de_validade              testeData_de_validade;
 
+    printf("(o sistema avisa em caso de erro)\nTestes de dominios:\n\n");
+
     if      (testeCodigo_de_evento.run() == false)          printf("Erro em testeCodigo_de_evento\n");
     else if (testeCodigo_de_apresentacao.run() == false)    printf("Erro em testeCodigo_de_apresentacao\n");
     else if (testeCodigo_de_ingresso.run() == false)        printf("Erro em testeCodigo_de_ingresso\n");
@@ -49,7 +51,7 @@ int main(){
     else if (testeNumero_de_cartao_de_credito.run() == false) printf("Erro em testeNumero_de_cartao_de_credito\n");
     else if (testeCodigo_de_seguranca.run() == false)       printf("Erro em testeCodigo_de_seguranca\n");
     else if (testeData_de_validade.run() == false)          printf("Erro em testeData_de_validade\n");
-    else printf("\nTudo ok com testes de dominios.\n");
+    else printf("Tudo ok com testes de dominios.\n");
 
 
 
@@ -61,6 +63,28 @@ int main(){
     TUIngresso              testeIngresso;
     TUCartao_de_Credito     testeCartao_de_credito;
 
+    printf("\nTestes de entidades:\n\n");
+
+    if      (testeUsuario.RunTesteCpf() == false)           printf("Erro em testeUsuario.RunTesteCpf\n");
+    else if (testeUsuario.RunTesteSenha() == false)         printf("Erro em testeUsuario.RunTesteSenha\n");
+    else if (testeEvento.RunTesteCidade() == false)             printf("Erro em testeEvento.RunTesteCidade\n");
+    else if (testeEvento.RunTesteClasseEvento() == false)       printf("Erro em testeEvento.RunTesteClasseEvento\n");
+    else if (testeEvento.RunTesteCodigoEvento() == false)       printf("Erro em testeEvento.RunTesteCodigoEvento\n");
+    else if (testeEvento.RunTesteEstado() == false)             printf("Erro em testeEvento.RunTesteEstado\n");
+    else if (testeEvento.RunTesteFaixaEtaria() == false)        printf("Erro em testeEvento.RunTesteFaixaEtaria\n");
+    else if (testeEvento.RunTesteNomeEvento() == false)         printf("Erro em testeEvento.RunTesteNomeEvento\n");
+    else if (testeEvento.RunTesteEstado() == false)             printf("Erro em testeEvento.RunTesteEstado\n");
+    else if (testeApresentacao.RunTesteCodigoApresentacao() == false)      printf("Erro em testeApresentacao.RunTesteCodigoApresentacao\n");
+    else if (testeApresentacao.RunTesteData() == false)         printf("Erro em testeApresentacao.RunTesteData\n");
+    else if (testeApresentacao.RunTesteDisponibilidade() == false)      printf("Erro em testeApresentacao.RunTesteDisponibilidade\n");
+    else if (testeApresentacao.RunTesteHorario() == false)      printf("Erro em testeApresentacao.RunTesteHorario\n");
+    else if (testeApresentacao.RunTesteNumeroSala() == false)   printf("Erro em testeApresentacao.RunTesteNumeroSala\n");
+    else if (testeApresentacao.RunTestePreco() == false)      printf("Erro em testeApresentacao.RunTestePreco\n");
+    else if (testeIngresso.RunTesteCodigoIngresso() == false)   printf("Erro em testeIngresso.RunTesteCodigoIngresso\n");
+    else if (testeCartao_de_credito.RunTesteCodigoSeguranca() == false) printf("Erro em testeCartao_de_credito.RunTesteCodigoSeguranca\n");
+    else if (testeCartao_de_credito.RunTesteDataValidade() == false) printf("Erro em testeCartao_de_credito.RunTesteDataValidade\n");
+    else if (testeCartao_de_credito.RunTesteNumeroCartao() == false) printf("Erro em testeCartao_de_credito.RunTesteNumeroCartao\n");
+    else printf("Tudo ok com testes de entidade.\n");
 
     return 0;
 

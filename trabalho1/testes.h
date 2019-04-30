@@ -66,7 +66,7 @@ class TUApresentacao{
     // definição de constantes utilizadas
         std::string VALOR_VALIDO_CODIGO; //= "0234";
         std::string VALOR_VALIDO_DATA; //= "02/09/19";
-        std::string VALOR_VALIDO_HORARIO; //= "09:23";
+        std::string VALOR_VALIDO_HORARIO; //= "09:30";
         float VALOR_VALIDO_PRECO; //= 200.00;
         int VALOR_VALIDO_SALA; //= 2;
         int VALOR_VALIDO_DISPONIBILIDADE; //= 40;
