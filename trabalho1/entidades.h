@@ -41,6 +41,7 @@ class Evento{
         Faixa_etaria faixa;
 
     public:
+  
         void Set(const Codigo_de_evento &input) throw (invalid_argument){ // seta o valor do código de evento, o input é o código a ser setado
             this->codigo= input;
         }
@@ -101,6 +102,7 @@ class Apresentacao{
         Disponibilidade disponibilidade;
 
     public:
+  
         void Set(const Codigo_de_apresentacao &input) throw (invalid_argument){ // seta o codigo de apresentação da apresentação, o input é o código a ser setado
             this->codigo = input;
         }
@@ -109,6 +111,7 @@ class Apresentacao{
             return codigo;
         }
 
+  
         void Set(const Data &input) throw (invalid_argument){ // seta a data da apresentação, o input é a data a ser setada
             this->data = input;
         }
@@ -133,7 +136,7 @@ class Apresentacao{
             return preco;
         }
 
-        void Set(const Numero_de_sala &input) throw (invalid_argument){ // seta o número da sala da apresentação, o input é o número serado
+        void Set(const Numero_de_sala &input) throw (invalid_argument){ // seta o número da sala da apresentação, o input é o número setado
             this->sala = input;
         }
 
@@ -156,6 +159,7 @@ class Ingresso{
         Codigo_de_ingresso codigo;
 
     public:
+  
         void Set(const Codigo_de_ingresso &input) throw (invalid_argument){ // seta o código do ingresso, o iput é o código a ser setado
             this->codigo = input;
         }
@@ -173,7 +177,9 @@ class Cartao_de_Credito{
         Data_de_validade data;
 
     public:
+  
         void Set(const Numero_de_cartao_de_credito &input) throw (invalid_argument){ // seta o número de cartão do cartão, o input é o número setado
+
             this->numero = input;
         }
 
@@ -182,6 +188,7 @@ class Cartao_de_Credito{
         }
 
         void Set(const Codigo_de_seguranca &input) throw (invalid_argument){ // seta o código de segurança do cartão, o input é o código setado
+
             this->codigo = input;
         }
 
@@ -190,6 +197,7 @@ class Cartao_de_Credito{
         }
 
         void Set(const Data_de_validade &input) throw (invalid_argument){// seta a data de  validade do cartão, o input é a data a ser setada
+
             this->data = input;
         }
 

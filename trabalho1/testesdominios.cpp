@@ -27,7 +27,7 @@
         catch(std::exception &e){
             houveException = true;
         }
-        if(houveException == false) estado = false; // se nao houver exceção, houve um erro no teste
+        if(houveException == false) estado = false; // se nao houver exceï¿½ï¿½o, houve um erro no teste
     }
 
 // Codigo_de_apresentacao
@@ -55,7 +55,7 @@
         catch(std::exception &e){
             houveException = true;
         }
-        if(houveException == false) estado = false; // se nao houver exceção, houve um erro no teste
+        if(houveException == false) estado = false; // se nao houver exceï¿½ï¿½o, houve um erro no teste
     }
 
 // Codigo_de_ingresso
@@ -83,7 +83,7 @@
         catch(std::exception &e){
             houveException = true;
         }
-        if(houveException == false) estado = false; // se nao houver exceção, houve um erro no teste
+        if(houveException == false) estado = false; // se nao houver exceï¿½ï¿½o, houve um erro no teste
     }
 
 // Nome_de_evento
@@ -111,7 +111,7 @@
         catch(std::exception &e){
             houveException = true;
         }
-        if(houveException == false) estado = false; // se nao houver exceção, houve um erro no teste
+        if(houveException == false) estado = false; // se nao houver exceï¿½ï¿½o, houve um erro no teste
     }
 
 // Data
@@ -139,7 +139,7 @@
         catch(std::exception &e){
             houveException = true;
         }
-        if(houveException == false) estado = false; // se nao houver exceção, houve um erro no teste
+        if(houveException == false) estado = false; // se nao houver exceï¿½ï¿½o, houve um erro no teste
     }
 
 // Horario
@@ -167,7 +167,7 @@
         catch(std::exception &e){
             houveException = true;
         }
-        if(houveException == false) estado = false; // se nao houver exceção, houve um erro no teste
+        if(houveException == false) estado = false; // se nao houver exceï¿½ï¿½o, houve um erro no teste
     }
 
 // Preco
@@ -195,7 +195,7 @@
         catch(std::exception &e){
             houveException = true;
         }
-        if(houveException == false) estado = false; // se nao houver exceção, houve um erro no teste
+        if(houveException == false) estado = false; // se nao houver exceï¿½ï¿½o, houve um erro no teste
     }
 
 // Numero_de_sala
@@ -223,7 +223,7 @@
         catch(std::exception &e){
             houveException = true;
         }
-        if(houveException == false) estado = false; // se nao houver exceção, houve um erro no teste
+        if(houveException == false) estado = false; // se nao houver exceï¿½ï¿½o, houve um erro no teste
     }
 
 // Cidade
@@ -251,7 +251,7 @@
         catch(std::exception &e){
             houveException = true;
         }
-        if(houveException == false) estado = false; // se nao houver exceção, houve um erro no teste
+        if(houveException == false) estado = false; // se nao houver exceï¿½ï¿½o, houve um erro no teste
     }
 
 // Estado
@@ -279,7 +279,7 @@
         catch(std::exception &e){
             houveException = true;
         }
-        if(houveException == false) estado = false; // se nao houver exceção, houve um erro no teste
+        if(houveException == false) estado = false; // se nao houver exceï¿½ï¿½o, houve um erro no teste
     }
 
 // Disponibilidade
@@ -307,7 +307,7 @@
         catch(std::exception &e){
             houveException = true;
         }
-        if(houveException == false) estado = false; // se nao houver exceção, houve um erro no teste
+        if(houveException == false) estado = false; // se nao houver exceï¿½ï¿½o, houve um erro no teste
     }
 
 // Classe_de_evento
@@ -335,7 +335,7 @@
         catch(std::exception &e){
             houveException = true;
         }
-        if(houveException == false) estado = false; // se nao houver exceção, houve um erro no teste
+        if(houveException == false) estado = false; // se nao houver exceï¿½ï¿½o, houve um erro no teste
     }
 
 // Faixa_etaria
@@ -363,7 +363,7 @@
         catch(std::exception &e){
             houveException = true;
         }
-        if(houveException == false) estado = false; // se nao houver exceção, houve um erro no teste
+        if(houveException == false) estado = false; // se nao houver exceï¿½ï¿½o, houve um erro no teste
     }
 
 // Cpf
@@ -391,7 +391,7 @@
         catch(std::exception &e){
             houveException = true;
         }
-        if(houveException == false) estado = false; // se nao houver exceção, houve um erro no teste
+        if(houveException == false) estado = false; // se nao houver exceï¿½ï¿½o, houve um erro no teste
     }
 
 // Senha
@@ -419,7 +419,7 @@
         catch(std::exception &e){
             houveException = true;
         }
-        if(houveException == false) estado = false; // se nao houver exceção, houve um erro no teste
+        if(houveException == false) estado = false; // se nao houver exceï¿½ï¿½o, houve um erro no teste
     }
 
 // Numero_de_cartao_de_credito
@@ -447,7 +447,7 @@
         catch(std::exception &e){
             houveException = true;
         }
-        if(houveException == false) estado = false; // se nao houver exceção, houve um erro no teste
+        if(houveException == false) estado = false; // se nao houver exceï¿½ï¿½o, houve um erro no teste
     }
 
 // Codigo_de_seguranca
@@ -475,7 +475,7 @@
         catch(std::exception &e){
             houveException = true;
         }
-        if(houveException == false) estado = false; // se nao houver exceção, houve um erro no teste
+        if(houveException == false) estado = false; // se nao houver exceï¿½ï¿½o, houve um erro no teste
     }
 
 // Data_de_validade
@@ -503,5 +503,5 @@
         catch(std::exception &e){
             houveException = true;
         }
-        if(houveException == false) estado = false; // se nao houver exceção, houve um erro no teste
+        if(houveException == false) estado = false; // se nao houver exceï¿½ï¿½o, houve um erro no teste
     }

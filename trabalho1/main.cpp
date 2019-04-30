@@ -87,5 +87,4 @@ int main(){
     else printf("Tudo ok com testes de entidade.\n");
 
     return 0;
-
 }

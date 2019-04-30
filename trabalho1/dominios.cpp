@@ -9,7 +9,7 @@ using namespace std;
 
 // Todos os invalidarguments sao input invalido, o catch deve mostrar como deve ser um input correto
 
-void Codigo_de_evento::Validar(string input) throw (invalid_argument){
+void Codigo_de_evento::Validar(string input) noexcept(false){
 
     //inicio da investigacao de input
     if (input.length() != 3){
@@ -23,7 +23,7 @@ void Codigo_de_evento::Validar(string input) throw (invalid_argument){
     }
 }
 
-void Codigo_de_apresentacao::Validar(string input) throw (invalid_argument){
+void Codigo_de_apresentacao::Validar(string input) noexcept(false){
 
     //inicio da investigacao de input
     if (input.length() != 4){
@@ -37,7 +37,7 @@ void Codigo_de_apresentacao::Validar(string input) throw (invalid_argument){
     }
 }
 
-void Codigo_de_ingresso::Validar(string input) throw (invalid_argument){
+void Codigo_de_ingresso::Validar(string input) noexcept(false){
 
     //inicio da investigacao de input
     if (input.length() != 5){
@@ -51,7 +51,7 @@ void Codigo_de_ingresso::Validar(string input) throw (invalid_argument){
     }
 }
 
-void Nome_de_evento::Validar(string input) throw (invalid_argument){
+void Nome_de_evento::Validar(string input) noexcept(false){
 
     //inicio da investigacao de input
     if (input.length() > 20){
@@ -146,7 +146,7 @@ void Horario::Validar(string input) throw (invalid_argument){
     }
 }
 
-void Preco::Validar(float input) throw (invalid_argument){
+void Preco::Validar(float input) noexcept(false){
     input = floorf(input * 100) / 100; //arredonda para duas casas decimais
 
     if ( input < 0  || input > 1000.001){
@@ -160,7 +160,7 @@ void Numero_de_sala::Validar(int input) throw (invalid_argument){
     }
 }
 
-void Cidade::Validar(string input) throw (invalid_argument){
+void Cidade::Validar(string input) noexcept(false){
 
     //inicio da investigacao de input
     if (input.length() > 16){
@@ -189,7 +189,7 @@ void Cidade::Validar(string input) throw (invalid_argument){
     }
 }
 
-void Estado::Validar(string input) throw (invalid_argument){
+void Estado::Validar(string input) noexcept(false){
 
     /*AC, AL, AP, AM, BA, CE, DF, ES, GO, MA, MT, MS, MG, PA,
       PB, PR, PE, PI, RJ, RN, RS, RO, RR, SC, SP, SE, TO*/
@@ -203,21 +203,21 @@ void Estado::Validar(string input) throw (invalid_argument){
     }
 }
 
-void Disponibilidade::Validar(int input) throw (invalid_argument){
+void Disponibilidade::Validar(int input) noexcept(false){
 
     if ( input < 0 || input > 250){
         throw invalid_argument("input invalido");
     }
 }
 
-void Classe_de_evento::Validar(int input) throw (invalid_argument){
+void Classe_de_evento::Validar(int input) noexcept(false){
 
     if ( input < 1 || input > 4){
         throw invalid_argument("input invalido");
     }
 }
 
-void Faixa_etaria::Validar(string input) throw (invalid_argument){
+void Faixa_etaria::Validar(string input) noexcept(false){
 
     /*AC, AL, AP, AM, BA, CE, DF, ES, GO, MA, MT, MS, MG, PA,
       PB, PR, PE, PI, RJ, RN, RS, RO, RR, SC, SP, SE, TO*/
@@ -226,7 +226,7 @@ void Faixa_etaria::Validar(string input) throw (invalid_argument){
     }
 }
 
-void Cpf::Validar(string input) throw (invalid_argument){
+void Cpf::Validar(string input) noexcept(false){
 
     // XXX.XXX.XXX-XX
     // 01234567890123
@@ -287,7 +287,7 @@ void Cpf::Validar(string input) throw (invalid_argument){
     }
 }
 
-void Senha::Validar(string input) throw (invalid_argument){
+void Senha::Validar(string input) noexcept(false){
 
     //inicio da investigacao de input
     if (input.length() != 6) throw invalid_argument("input invalido");
@@ -312,7 +312,7 @@ void Senha::Validar(string input) throw (invalid_argument){
     }
 }
 
-void Numero_de_cartao_de_credito::Validar(string input) throw (invalid_argument){
+void Numero_de_cartao_de_credito::Validar(string input) noexcept(false){
 
     if (input.length() != 16){
         throw invalid_argument("input invalido");
@@ -340,7 +340,7 @@ void Numero_de_cartao_de_credito::Validar(string input) throw (invalid_argument)
 
 };
 
-void Codigo_de_seguranca::Validar(string input) throw (invalid_argument){
+void Codigo_de_seguranca::Validar(string input) noexcept(false){
 
     if (input.length() != 3) throw invalid_argument("input invalido");
 
@@ -349,7 +349,7 @@ void Codigo_de_seguranca::Validar(string input) throw (invalid_argument){
     }
 };
 
-void Data_de_validade::Validar(string input) throw (invalid_argument){
+void Data_de_validade::Validar(string input) noexcept(false){
 
     // MM/AA
     // 01234
