@@ -13,7 +13,7 @@ class Usuario{
 
     public:
         // nos consideramos que o objeto imput da classe cpf possui valor válido, já que ele foi setado apartir do método cpf::Set
-        void Set(const Cpf &input) noexcept(false){ // seta o valor do cpf, imput é o cpf que será setado
+        void Set(const Cpf &input) throw (invalid_argument){ // seta o valor do cpf, imput é o cpf que será setado
             this->cpf = input;
         }
 
@@ -21,7 +21,7 @@ class Usuario{
             return cpf;
         }
 
-        void Set(const Senha &input) noexcept(false){ // seta o valor da senha, imput é a senha a ser setada
+        void Set(const Senha &input) throw (invalid_argument){ // seta o valor da senha, imput é a senha a ser setada
             this->senha = input;
         }
 
@@ -41,7 +41,8 @@ class Evento{
         Faixa_etaria faixa;
 
     public:
-        void Set(const Codigo_de_evento &input) noexcept(false){ // seta o valor do código de evento, o input é o código a ser setado
+  
+        void Set(const Codigo_de_evento &input) throw (invalid_argument){ // seta o valor do código de evento, o input é o código a ser setado
             this->codigo= input;
         }
 
@@ -49,7 +50,7 @@ class Evento{
             return codigo;
         }
 
-        void Set(const Nome_de_evento &input) noexcept(false){ // seta o nome do evento, o input é o nome a ser setado
+        void Set(const Nome_de_evento &input) throw (invalid_argument){ // seta o nome do evento, o input é o nome a ser setado
             this->nome = input;
         }
 
@@ -57,7 +58,7 @@ class Evento{
             return nome;
         }
 
-        void Set(const Cidade &input) noexcept(false){ // seta a cidade do evento, o input é a cidade a ser setada
+        void Set(const Cidade &input) throw (invalid_argument){ // seta a cidade do evento, o input é a cidade a ser setada
             this->cidade = input;
         }
 
@@ -65,7 +66,7 @@ class Evento{
             return cidade;
         }
 
-        void Set(const Estado &input) noexcept(false){ // seta o estado do evento, o input é o estado a ser setado
+        void Set(const Estado &input) throw (invalid_argument){ // seta o estado do evento, o input é o estado a ser setado
             this->estado = input;
         }
 
@@ -73,7 +74,7 @@ class Evento{
             return estado;
         }
 
-        void Set(const Classe_de_evento &input) noexcept(false){ // seta a classe de evento do evento, o input é a classe a ser setada
+        void Set(const Classe_de_evento &input) throw (invalid_argument){ // seta a classe de evento do evento, o input é a classe a ser setada
             this->classe = input;
         }
 
@@ -81,7 +82,7 @@ class Evento{
             return classe;
         }
 
-        void Set(const Faixa_etaria &input) noexcept(false){ // seta a faixa etária do evento, o input é a faixa a ser setada
+        void Set(const Faixa_etaria &input) throw (invalid_argument){ // seta a faixa etária do evento, o input é a faixa a ser setada
             this->faixa = input;
         }
 
@@ -101,7 +102,8 @@ class Apresentacao{
         Disponibilidade disponibilidade;
 
     public:
-        void Set(const Codigo_de_apresentacao &input) noexcept(false){ // seta o codigo de apresentação da apresentação, o input é o código a ser setado
+  
+        void Set(const Codigo_de_apresentacao &input) throw (invalid_argument){ // seta o codigo de apresentação da apresentação, o input é o código a ser setado
             this->codigo = input;
         }
 
@@ -109,7 +111,8 @@ class Apresentacao{
             return codigo;
         }
 
-        void Set(const Data &input) noexcept(false){ // seta a data da apresentação, o input é a data a ser setada
+  
+        void Set(const Data &input) throw (invalid_argument){ // seta a data da apresentação, o input é a data a ser setada
             this->data = input;
         }
 
@@ -117,7 +120,7 @@ class Apresentacao{
             return data;
         }
 
-        void Set(const Horario &input) noexcept(false){ // seta o horário da apresentação, o input é o horário a ser setado
+        void Set(const Horario &input) throw (invalid_argument){ // seta o horário da apresentação, o input é o horário a ser setado
             this->horario = input;
         }
 
@@ -125,7 +128,7 @@ class Apresentacao{
             return horario;
         }
 
-        void Set(const Preco &input) noexcept(false){ // seta o preço da apresentação, o input é o preço setado
+        void Set(const Preco &input) throw (invalid_argument){ // seta o preço da apresentação, o input é o preço setado
             this->preco = input;
         }
 
@@ -133,7 +136,7 @@ class Apresentacao{
             return preco;
         }
 
-        void Set(const Numero_de_sala &input) noexcept(false){ // seta o número da sala da apresentação, o input é o número serado
+        void Set(const Numero_de_sala &input) throw (invalid_argument){ // seta o número da sala da apresentação, o input é o número setado
             this->sala = input;
         }
 
@@ -141,7 +144,7 @@ class Apresentacao{
             return sala;
         }
 
-        void Set(const Disponibilidade &input) noexcept(false){ // seta a disponibilidade da apresentação, o input é a disponibilidade setada
+        void Set(const Disponibilidade &input) throw (invalid_argument){ // seta a disponibilidade da apresentação, o input é a disponibilidade setada
             this->disponibilidade = input;
         }
 
@@ -156,7 +159,8 @@ class Ingresso{
         Codigo_de_ingresso codigo;
 
     public:
-        void Set(const Codigo_de_ingresso &input) noexcept(false){ // seta o código do ingresso, o iput é o código a ser setado
+  
+        void Set(const Codigo_de_ingresso &input) throw (invalid_argument){ // seta o código do ingresso, o iput é o código a ser setado
             this->codigo = input;
         }
 
@@ -173,7 +177,9 @@ class Cartao_de_Credito{
         Data_de_validade data;
 
     public:
-        void Set(const Numero_de_cartao_de_credito &input) noexcept(false){ // seta o número de cartão do cartão, o input é o número setado
+  
+        void Set(const Numero_de_cartao_de_credito &input) throw (invalid_argument){ // seta o número de cartão do cartão, o input é o número setado
+
             this->numero = input;
         }
 
@@ -181,7 +187,8 @@ class Cartao_de_Credito{
             return numero;
         }
 
-        void Set(const Codigo_de_seguranca &input) noexcept(false){ // seta o código de segurança do cartão, o input é o código setado
+        void Set(const Codigo_de_seguranca &input) throw (invalid_argument){ // seta o código de segurança do cartão, o input é o código setado
+
             this->codigo = input;
         }
 
@@ -189,7 +196,8 @@ class Cartao_de_Credito{
             return codigo;
         }
 
-        void Set(const Data_de_validade &input) noexcept(false){// seta a data de  validade do cartão, o input é a data a ser setada
+        void Set(const Data_de_validade &input) throw (invalid_argument){// seta a data de  validade do cartão, o input é a data a ser setada
+
             this->data = input;
         }
 

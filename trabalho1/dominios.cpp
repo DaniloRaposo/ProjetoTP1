@@ -70,15 +70,13 @@ void Nome_de_evento::Validar(string input) noexcept(false){
     }
 }
 
-void Data::Validar(string input) noexcept(false){
+void Data::Validar(string input) throw (invalid_argument){
     if(input.length() != 8){
         throw invalid_argument("input invalido");
     }
-
     if(input[2] != '/' && input[5] != '/'){
         throw invalid_argument("input invalido");
     }
-
     for(int n = 0; n<8; n++){
         if(n == 2 || n == 5) n++;
         if (isdigit(input[n]) == false){
@@ -103,24 +101,27 @@ void Data::Validar(string input) noexcept(false){
     else if(mes == 2){
         /*Como ano deve estar entre 2000 e 2099, o c�lculo do ano bissexto pode ser simplificado
         para apenas a congru�ncia com 4*/
-        if(ano%4 != 0){
-            if(dia<1 || dia>28){
+        if(ano%4 == 0){ // se for bissexto
+            if(dia<1 || dia>29){
                 throw invalid_argument("input invalido");
             }
         }
         else{
-            if(dia<1 || dia>29){
+            if(dia<1 || dia>28){
                 throw invalid_argument("input invalido");
             }
         }
     }
     else throw invalid_argument("input invalido"); //mes invalido
+
+
 }
 
-void Horario::Validar(string input) noexcept(false){
+void Horario::Validar(string input) throw (invalid_argument){
     if(input.length() != 5){
         throw invalid_argument("input invalido");
     }
+
 
     if(input[2] != ':'){
         throw invalid_argument("input invalido");
@@ -140,20 +141,21 @@ void Horario::Validar(string input) noexcept(false){
         throw invalid_argument("input invalido");
     }
 
-    if(minuto != 00 || minuto != 15 || minuto != 30 || minuto != 45){
+    if(minuto != 00 && minuto != 15 && minuto != 30 && minuto != 45){
         throw invalid_argument("input invalido");
     }
 }
 
 void Preco::Validar(float input) noexcept(false){
     input = floorf(input * 100) / 100; //arredonda para duas casas decimais
-    if ( 0 < input || input > 1000){
+
+    if ( input < 0  || input > 1000.001){
         throw invalid_argument("input invalido");
     }
 }
 
-void Numero_de_sala::Validar(int input) noexcept(false){
-    if ( 1 < input || input > 10){
+void Numero_de_sala::Validar(int input) throw (invalid_argument){
+    if ( input < 1 || input > 10){
         throw invalid_argument("input invalido");
     }
 }
@@ -168,7 +170,7 @@ void Cidade::Validar(string input) noexcept(false){
     if (isalpha(input[0]) == false){
         throw invalid_argument("input invalido");
     }
-    
+
     //input tem no max 16 caracteres
     for(int n = 0; n<input.length(); n++){
         if (isalpha(input[n]) == false && input[n] != '.' && input[n] != ' '){
@@ -203,14 +205,14 @@ void Estado::Validar(string input) noexcept(false){
 
 void Disponibilidade::Validar(int input) noexcept(false){
 
-    if ( 0 < input || input > 250){
+    if ( input < 0 || input > 250){
         throw invalid_argument("input invalido");
     }
 }
 
 void Classe_de_evento::Validar(int input) noexcept(false){
 
-    if ( 1 < input || input > 4){
+    if ( input < 1 || input > 4){
         throw invalid_argument("input invalido");
     }
 }
@@ -293,14 +295,13 @@ void Senha::Validar(string input) noexcept(false){
     int upper = 0, lower = 0, digit = 0;
     for(int n = 0; n<6; n++){
         // checa digitos validos
-        if (isalpha(input[n]) == false && isdigit(input[n]) == false) throw invalid_argument("input invalido");
+        if ( isalpha(input[n]) == false && isdigit(input[n]) == false ) throw invalid_argument("input invalido");
 
         if ( isupper(input[n]) == true ) upper++;
-        if ( islower(input[n]) == true ) lower++;
         if ( isdigit(input[n]) == true ) digit++;
+        else lower++;
         //nao eh necessario checar se tem no min uma letra, pois isso eh uma regra emergente
     }
-
     if( upper == 0 || lower == 0 || digit == 0 )  throw invalid_argument("input invalido");
 
     for(int n = 0; n<5; n++){
@@ -342,7 +343,7 @@ void Numero_de_cartao_de_credito::Validar(string input) noexcept(false){
 void Codigo_de_seguranca::Validar(string input) noexcept(false){
 
     if (input.length() != 3) throw invalid_argument("input invalido");
-    
+
     for(int n = 0; n < 3; n++){
         if (isdigit(input[n]) == false) throw invalid_argument("input invalido");
     }

@@ -4,6 +4,9 @@
 #include "dominios.h"
 #include "entidades.h"
 
+
+    bool SUCESSO = true;
+    bool FALHA = false;
 // Usuario:
 // private:
 
@@ -18,6 +21,7 @@ void TUUsuario::TearDown(){
 
 void TUUsuario::TestarCpf(){
     Cpf cpf_auxiliar; // objeto auxiliar para dar um Usuario::Set
+    VALOR_VALIDO_CPF = "106.506.924-38";
 
     try{
         cpf_auxiliar.Set(VALOR_VALIDO_CPF); // seta o atributo do cpf para o valor valido
@@ -34,6 +38,7 @@ void TUUsuario::TestarCpf(){
 
 void TUUsuario::TestarSenha(){
     Senha senha_auxiliar;// objeto auxiliar para dar um Usuario::Set
+    VALOR_VALIDO_SENHA = "12345A";
 
     try{
         senha_auxiliar.Set(VALOR_VALIDO_SENHA); // seta o atributo da senha para o valor valido
@@ -78,7 +83,7 @@ void TUEvento::TearDown(){
 
 void TUEvento::TestarCodigoEvento(){
     Codigo_de_evento codigo_auxiliar; // objeto auxiliar para dar um Evento::Set
-
+    VALOR_VALIDO_CODIGO = "041";
     try{
         codigo_auxiliar.Set(VALOR_VALIDO_CODIGO); // seta o atributo do codigo de evento para o valor valido
         evento->Set(codigo_auxiliar); // seta o codigo de evento do evento como o codigo auxiliar
@@ -94,7 +99,7 @@ void TUEvento::TestarCodigoEvento(){
 
 void TUEvento::TestarNomeEvento(){
     Nome_de_evento nome_auxiliar; // objeto auxiliar para dar um Evento::Set
-
+    VALOR_VALIDO_NOME = "abcdefghijklmnopqrst";
     try{
         nome_auxiliar.Set(VALOR_VALIDO_NOME); // seta o atributo do nome de evento para o valor valido
         evento->Set(nome_auxiliar); // seta o nome do evento  do evento como o nome auxiliar
@@ -110,7 +115,7 @@ void TUEvento::TestarNomeEvento(){
 
 void TUEvento::TestarCidade(){
     Cidade cidade_auxiliar; // objeto auxiliar para dar um Evento::Set
-
+    VALOR_VALIDO_CIDADE = "abcdefghijklmnop";
     try{
         cidade_auxiliar.Set(VALOR_VALIDO_CIDADE);// seta o atributo da cidade para o valor valido
         evento->Set(cidade_auxiliar); // seta a cidade do evento como a cidade auxiliar
@@ -126,7 +131,7 @@ void TUEvento::TestarCidade(){
 
 void TUEvento::TestarEstado(){
     Estado estado_auxiliar; // objeto auxiliar para dar um Evento::Set
-
+    VALOR_VALIDO_ESTADO = "RN";
     try{
         estado_auxiliar.Set(VALOR_VALIDO_ESTADO);// seta o atributo do estado para o valor valido
         evento->Set(estado_auxiliar);// seta o estado do evento com o estado auxiliar
@@ -142,7 +147,7 @@ void TUEvento::TestarEstado(){
 
 void TUEvento::TestarClasseEvento(){
     Classe_de_evento classe_auxiliar; // objeto auxiliar para dar um Evento::Set
-
+    VALOR_VALIDO_CLASSE = 1; // Teatro
     try{
         classe_auxiliar.Set(VALOR_VALIDO_CLASSE);// seta o atributo da classe para o valor valido
         evento->Set(classe_auxiliar);// seta a classe do evento com a classe auxiliar
@@ -158,7 +163,7 @@ void TUEvento::TestarClasseEvento(){
 
 void TUEvento::TestarFaixaEtaria(){
     Faixa_etaria faixa_auxiliar;// objeto auxiliar para dar um Evento::Set
-
+    VALOR_VALIDO_FAIXA = "16";
     try{
         faixa_auxiliar.Set(VALOR_VALIDO_FAIXA);// seta o atributo da faixa para o valor valido
         evento->Set(faixa_auxiliar);// seta a faixa do evento com a faixa auxiliar
@@ -214,6 +219,8 @@ bool TUEvento::RunTesteFaixaEtaria(){
     return estado; // retorna resultado do teste
 }
 
+// Apresentacao:
+
 void TUApresentacao::SetUp(){
     apresentacao = new Apresentacao(); // aloca espaço de memória para o objeto apresentacao
     estado = SUCESSO;
@@ -225,7 +232,7 @@ void TUApresentacao::TearDown(){
 
 void TUApresentacao::TestarCodigoApresentacao(){
     Codigo_de_apresentacao codigo_auxiliar; // objeto auxiliar para dar um Apresentacao::Set
-
+    VALOR_VALIDO_CODIGO = "0234";
     try{
         codigo_auxiliar.Set(VALOR_VALIDO_CODIGO); // seta o atributo do codigo de apresentacao para o valor válido
         apresentacao->Set(codigo_auxiliar); // seta o codigo de apresentacao da apresentacao como o codigo auxiliar
@@ -241,7 +248,7 @@ void TUApresentacao::TestarCodigoApresentacao(){
 
 void TUApresentacao::TestarData(){
     Data data_auxiliar; // objeto auxiliar para dar um Apresentacao::Set
-
+    VALOR_VALIDO_DATA = "02/09/19";
     try{
         data_auxiliar.Set(VALOR_VALIDO_DATA); // seta o atributo da data para o valor válido
         apresentacao->Set(data_auxiliar); // seta a data da apresentacao como a data auxiliar
@@ -257,7 +264,7 @@ void TUApresentacao::TestarData(){
 
 void TUApresentacao::TestarHorario(){
     Horario horario_auxiliar; // objeto auxiliar para dar um Apresentacao::Set
-
+    VALOR_VALIDO_HORARIO = "09:30";
     try{
         horario_auxiliar.Set(VALOR_VALIDO_HORARIO); // seta o atributo do horario para o valor válido
         apresentacao->Set(horario_auxiliar); // seta o horario da apresentacao como o horario auxiliar
@@ -273,7 +280,7 @@ void TUApresentacao::TestarHorario(){
 
 void TUApresentacao::TestarPreco(){
     Preco preco_auxiliar; // objeto auxiliar para dar um Apresentacao::Set
-
+    VALOR_VALIDO_PRECO = 200.00;
     try{
         preco_auxiliar.Set(VALOR_VALIDO_PRECO); // seta o atributo do preco para o valor válido
         apresentacao->Set(preco_auxiliar); // seta o preco da apresentacao como o preco auxiliar
@@ -289,7 +296,7 @@ void TUApresentacao::TestarPreco(){
 
 void TUApresentacao::TestarNumeroSala(){
     Numero_de_sala sala_auxiliar; // objeto auxiliar para dar um Apresentacao::Set
-
+    VALOR_VALIDO_SALA = 2;
     try{
         sala_auxiliar.Set(VALOR_VALIDO_SALA); // seta o atributo do numero da sala para o valor válido
         apresentacao->Set(sala_auxiliar); // seta o numero da sala da apresentacao como a sala auxiliar
@@ -305,7 +312,7 @@ void TUApresentacao::TestarNumeroSala(){
 
 void TUApresentacao::TestarDisponibilidade(){
     Disponibilidade disponibilidade_auxiliar; // objeto auxiliar para dar um Apresentacao::Set
-
+    VALOR_VALIDO_DISPONIBILIDADE = 40;
     try{
         disponibilidade_auxiliar.Set(VALOR_VALIDO_DISPONIBILIDADE); // seta o atributo da disponibilidade para o valor válido
         apresentacao->Set(disponibilidade_auxiliar); // seta a disponibilidade da apresentacao como a disponibilidade auxiliar
@@ -361,6 +368,8 @@ bool TUApresentacao::RunTesteDisponibilidade(){
     return estado; // retorna resultado do teste
 }
 
+// Ingresso:
+
 void TUIngresso::SetUp(){
     ingresso = new Ingresso(); // aloca espaço de memória para o objeto ingresso
     estado = SUCESSO;
@@ -371,8 +380,8 @@ void TUIngresso::TearDown(){
 }
 
 void TUIngresso::TestarCodigoIngresso(){
-     Codigo_de_ingresso codigo_auxiliar; // objeto auxiliar para dar um Ingresso::Set
-
+    Codigo_de_ingresso codigo_auxiliar; // objeto auxiliar para dar um Ingresso::Set
+    VALOR_VALIDO_CODIGO = "12346";
     try{
         codigo_auxiliar.Set(VALOR_VALIDO_CODIGO); // seta o atributo do codigo de ingresso para o valor válido
         ingresso->Set(codigo_auxiliar); // seta o codigo do ingresso do ingresso como o codigo auxiliar
@@ -393,6 +402,8 @@ bool TUIngresso::RunTesteCodigoIngresso(){
     return estado; // retorna resultado do teste
 }
 
+// Cartao_de_credito:
+
 void TUCartao_de_Credito::SetUp(){
     cartao = new Cartao_de_Credito(); // aloca espaço de memória para o objeto cartao
     estado = SUCESSO;
@@ -403,8 +414,8 @@ void TUCartao_de_Credito::TearDown(){
 }
 
 void TUCartao_de_Credito::TestarNumeroCartao(){
-     Numero_de_cartao_de_credito numero_auxiliar; // objeto auxiliar para dar um Cartao_de_Credito::Set
-
+    Numero_de_cartao_de_credito numero_auxiliar; // objeto auxiliar para dar um Cartao_de_Credito::Set
+    VALOR_VALIDO_NUMERO = "0000000000002311";
     try{
         numero_auxiliar.Set(VALOR_VALIDO_NUMERO); // seta o atributo do numero de cartao de credito para o valor válido
         cartao->Set(numero_auxiliar); // seta o numero de cartao de credito do cartao como o numero auxiliar
@@ -419,8 +430,8 @@ void TUCartao_de_Credito::TestarNumeroCartao(){
 }
 
 void TUCartao_de_Credito::TestarCodigoSeguranca(){
-     Codigo_de_seguranca codigo_auxiliar; // objeto auxiliar para dar um Cartao_de_Credito::Set
-
+    Codigo_de_seguranca codigo_auxiliar; // objeto auxiliar para dar um Cartao_de_Credito::Set
+    VALOR_VALIDO_CODIGO = "000";
     try{
         codigo_auxiliar.Set(VALOR_VALIDO_CODIGO); // seta o atributo do codigo de seguranca para o valor válido
         cartao->Set(codigo_auxiliar); // seta o codigo de seguranca do cartao como o codigo auxiliar
@@ -435,8 +446,8 @@ void TUCartao_de_Credito::TestarCodigoSeguranca(){
 }
 
 void TUCartao_de_Credito::TestarDataValidade(){
-     Data_de_validade data_auxiliar; // objeto auxiliar para dar um Cartao_de_Credito::Set
-
+    Data_de_validade data_auxiliar; // objeto auxiliar para dar um Cartao_de_Credito::Set
+    VALOR_VALIDO_DATA = "10/10";
     try{
         data_auxiliar.Set(VALOR_VALIDO_DATA); // seta o atributo da data de validade para o valor válido
         cartao->Set(data_auxiliar); // seta a data de validade do cartao como a data auxiliar
