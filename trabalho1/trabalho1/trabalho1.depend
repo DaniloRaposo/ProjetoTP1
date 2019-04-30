@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1555785301 source:c:\users\cliente 01\documents\github\projetotp1\trabalho1\entidades.cpp
+
+1556600047 source:c:\users\cliente 01\documents\github\projetotp1\trabalho1\dominios.cpp
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<iostream>
+	<string>
+	<math.h>
+	"dominios.h"
+
+1556595662 c:\users\cliente 01\documents\github\projetotp1\trabalho1\dominios.h
+	<stdexcept>
+	<stdio.h>
+
+1556593925 source:c:\users\cliente 01\documents\github\projetotp1\trabalho1\main.cpp
+	<stdio.h>
+	"dominios.h"
+	"entidades.h"
+	"testes.h"
+	"testesdominios.h"
+
+1556586953 c:\users\cliente 01\documents\github\projetotp1\trabalho1\entidades.h
+	<stdexcept>
+	"dominios.h"
+
+1556593590 c:\users\cliente 01\documents\github\projetotp1\trabalho1\testes.h
+	"dominios.h"
+	"entidades.h"
+
+1556593683 c:\users\cliente 01\documents\github\projetotp1\trabalho1\testesdominios.h
+	"dominios.h"
+
+1556593589 source:c:\users\cliente 01\documents\github\projetotp1\trabalho1\testes.cpp
+	<stdexcept>
+	"testes.h"
+	"dominios.h"
+	"entidades.h"
+
+1556600273 source:c:\users\cliente 01\documents\github\projetotp1\trabalho1\testesdominios.cpp
+	"testesdominios.h"
+

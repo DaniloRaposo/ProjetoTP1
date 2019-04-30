@@ -1,4 +1,5 @@
 
+
 #include <stdio.h>
 #include "dominios.h"
 #include "entidades.h"
@@ -30,26 +31,37 @@ int main(){
     TUCodigo_de_seguranca           testeCodigo_de_seguranca;
     TUData_de_validade              testeData_de_validade;
 
-    if (testeCodigo_de_evento.run() == FALHA) printf("Erro em testeCodigo_de_evento\n");
-    else if (testeCodigo_de_apresentacao.run() == FALHA) printf("Erro em testeCodigo_de_apresentacao\n");
-    else if (testeCodigo_de_ingresso.run() == FALHA) printf("Erro em testeCodigo_de_ingresso\n");
-    else if (testeNome_de_evento.run() == FALHA) printf("Erro em testeNome_de_evento\n");
-    else if (testeData.run() == FALHA) printf("Erro em testeData\n");
-    else if (testeHorario.run() == FALHA) printf("Erro em testeHorario\n");
-    else if (testePreco.run() == FALHA) printf("Erro em testePreco\n");
-    else if (testeNumero_de_sala.run() == FALHA) printf("Erro em testeNumero_de_sala\n");
-    else if (testeCidade.run() == FALHA) printf("Erro em testeCidade\n");
-    else if (testeEstado.run() == FALHA) printf("Erro em testeEstado\n");
-    else if (testeDisponibilidade.run() == FALHA) printf("Erro em testeDisponibilidade\n");
-    else if (testeClasse_de_evento.run() == FALHA) printf("Erro em testeClasse_de_evento\n");
-    else if (testeFaixa_etaria.run() == FALHA) printf("Erro em testeFaixa_etaria\n");
-    else if (testeCpf.run() == FALHA) printf("Erro em testeCpf\n");
-    else if (testeSenha.run() == FALHA) printf("Erro em testeSenha\n");
-    else if (testeNumero_de_cartao_de_credito.run() == FALHA) printf("Erro em testeNumero_de_cartao_de_credito\n");
-    else if (testeCodigo_de_seguranca.run() == FALHA) printf("Erro em testeCodigo_de_seguranca\n");
-    else if (testeData_de_validade.run() == FALHA) printf("Erro em testeData_de_validade\n");
+    if      (testeCodigo_de_evento.run() == false)          printf("Erro em testeCodigo_de_evento\n");
+    else if (testeCodigo_de_apresentacao.run() == false)    printf("Erro em testeCodigo_de_apresentacao\n");
+    else if (testeCodigo_de_ingresso.run() == false)        printf("Erro em testeCodigo_de_ingresso\n");
+    else if (testeNome_de_evento.run() == false)            printf("Erro em testeNome_de_evento\n");
+    else if (testeData.run() == false)                      printf("Erro em testeData\n");
+    else if (testeHorario.run() == false)                   printf("Erro em testeHorario\n");
+    else if (testePreco.run() == false)                     printf("Erro em testePreco\n");
+    else if (testeNumero_de_sala.run() == false)            printf("Erro em testeNumero_de_sala\n");
+    else if (testeCidade.run() == false)                    printf("Erro em testeCidade\n");
+    else if (testeEstado.run() == false)                    printf("Erro em testeEstado\n");
+    else if (testeDisponibilidade.run() == false)           printf("Erro em testeDisponibilidade\n");
+    else if (testeClasse_de_evento.run() == false)          printf("Erro em testeClasse_de_evento\n");
+    else if (testeFaixa_etaria.run() == false)              printf("Erro em testeFaixa_etaria\n");
+    else if (testeCpf.run() == false)                       printf("Erro em testeCpf\n");
+    else if (testeSenha.run() == false)                     printf("Erro em testeSenha\n");
+    else if (testeNumero_de_cartao_de_credito.run() == false) printf("Erro em testeNumero_de_cartao_de_credito\n");
+    else if (testeCodigo_de_seguranca.run() == false)       printf("Erro em testeCodigo_de_seguranca\n");
+    else if (testeData_de_validade.run() == false)          printf("Erro em testeData_de_validade\n");
     else printf("\nTudo ok com testes de dominios.\n");
 
+
+
     // TESTES DE ENTIDADES
+
+    TUUsuario               testeUsuario;
+    TUEvento                testeEvento;
+    TUApresentacao          testeApresentacao;
+    TUIngresso              testeIngresso;
+    TUCartao_de_Credito     testeCartao_de_credito;
+
+
+    return 0;
 
 }
